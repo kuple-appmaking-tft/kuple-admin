@@ -21,7 +21,13 @@ const getBadge = status => {
     default: return 'primary'
   }
 }
-const fields = ['name','registered', 'role', 'status']
+const fields = ['name','registered', 'role', 'status', {
+  key: 'show_details',
+  label: '',
+  _style: { width: '1%' },
+  sorter: false,
+  filter: false
+}]
 
 const Tables = () => {
   return (

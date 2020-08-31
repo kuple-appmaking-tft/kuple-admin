@@ -4,7 +4,7 @@ import CIcon from '@coreui/icons-react'
 export default [
   {
     _tag: 'CSidebarNavItem',
-    name: 'Dashboard',
+    name: '대시보드',
     to: '/dashboard',
     icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
     badge: {
@@ -13,6 +13,127 @@ export default [
     }
   },
   {
+    _tag: 'CSidebarNavTitle',
+    _children: ['게시판 분류']
+  },
+  {
+    _tag: 'CSidebarNavDropdown',
+    name: '단체게시판',
+    route: '/base',
+    icon: 'cil-puzzle',
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: '단체게시판 관리',
+        to: '/boards/groups',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: '운영진 권한 관리',
+        to: '/boards/groups/admin',
+      },
+    ],
+  },
+  {
+    _tag: 'CSidebarNavDropdown',
+    name: '일반게시판',
+    route: '/base',
+    icon: 'cil-puzzle',
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: '일반게시판 관리',
+        to: '/boards/normals',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: '운영진 권한 관리',
+        to: '/boards/normals/admin',
+      },
+    ],
+  },
+  {
+    _tag: 'CSidebarNavDropdown',
+    name: '사진게시판',
+    route: '/base',
+    icon: 'cil-puzzle',
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: '사진게시판 관리',
+        to: '/boards/photos',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: '운영진 권한 관리',
+        to: '/boards/photos/admin',
+      },
+    ],
+  },
+
+  {
+    _tag: 'CSidebarNavTitle',
+    _children: ['게시판 관리']
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'FAQ 관리',
+    to: '/boards/faqs',
+    icon: 'cil-drop',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: '수강평가글 모아보기',
+    to: '/boards/reviews',
+    icon: 'cil-drop',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: '게시물 관리',
+    to: '/boards/articles',
+    icon: 'cil-drop',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: '댓글 관리',
+    to: '/boards/comments',
+    icon: 'cil-drop',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: '휴지통 관리',
+    to: '/boards/recycle-bin',
+    icon: 'cil-drop',
+  },
+  {
+    _tag: 'CSidebarNavTitle',
+    _children: ['회원 관리']
+  },
+  {
+    _tag: 'CSidebarNavDropdown',
+    name: '운영진 관리',
+    route: '/base',
+    icon: 'cil-user',
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: '운영진 계정 생성',
+        to: '/admin/create',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: '회원 권한 부여',
+        to: '/admin/user',
+      },
+    ],
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: '회원 관리',
+    to: '/users/',
+    icon: 'cil-user',
+  }
+  /*{
     _tag: 'CSidebarNavTitle',
     _children: ['Theme']
   },
@@ -306,6 +427,6 @@ export default [
   {
     _tag: 'CSidebarNavDivider',
     className: 'm-2'
-  }
+  }*/
 ]
 
