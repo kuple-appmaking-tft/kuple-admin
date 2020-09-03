@@ -117,6 +117,11 @@ export default [
     _children: [
       {
         _tag: 'CSidebarNavItem',
+        name: '운영진 상세 권한 목록',
+        to: '/admin/auth',
+      },
+      {
+        _tag: 'CSidebarNavItem',
         name: '운영진 계정 생성',
         to: '/admin/create',
       },

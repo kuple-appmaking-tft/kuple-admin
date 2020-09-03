@@ -1,5 +1,5 @@
 import React from 'react'
-import { CCard, CCardBody, CCardHeader, CCol, CRow } from '@coreui/react'
+import {CButton, CCard, CCardBody, CCardFooter, CCardHeader, CCol, CDataTable, CRow} from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
 import usersData from './UsersData'
@@ -16,20 +16,51 @@ const User = ({match}) => {
         <CCard>
           <CCardHeader>
             USER ID: {match.params.id}
+            <CButton type="submit" size="m" color="primary"><CIcon name="cil-scrubber" /> 권한부여</CButton>
           </CCardHeader>
           <CCardBody>
               <table className="table table-hover">
                 <tbody>
-                  {
-                    userDetails.map(([key, value], index) => {
-                      return (
-                        <tr key={index.toString()}>
-                          <td><strong>{`${key}`}</strong></td>
-                          <td>{value}</td>
-                        </tr>
-                      )
-                    })
-                  }
+                  <tr>
+                    <td>id</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>닉네임</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>가입일</td>
+                    <td>2020-08-20</td>
+                  </tr>
+                  <tr>
+                    <td>이메일</td>
+                    <td>test@test.com</td>
+                  </tr>
+                  <tr>
+                    <td>비밀번호</td>
+                    <td>
+                      <CButton type="submit" size="m" color="primary"><CIcon name="cil-scrubber" /> 비밀번호 재설정</CButton>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>회원그룹</td>
+                    <td>재/휴학생</td>
+                  </tr>
+                  <tr>
+                    <td>성별</td>
+                    <td>여</td>
+                  </tr>
+                  <tr>
+                    <td>신고횟수</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>활동정지</td>
+                    <td>
+                      <CButton type="submit" size="m" color="primary"><CIcon name="cil-scrubber" /> 활동 정지 하기</CButton>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
           </CCardBody>
@@ -41,16 +72,22 @@ const User = ({match}) => {
           <CCardBody>
             <table className="table table-hover">
               <tbody>
-              {
-                userDetails.map(([key, value], index) => {
-                  return (
-                    <tr key={index.toString()}>
-                      <td><strong>{`${key}`}</strong></td>
-                      <td>{value}</td>
-                    </tr>
-                  )
-                })
-              }
+              <tr>
+                <th>게시판 타입</th>
+                <th>게시판 명</th>
+                <th>권한</th>
+                <th>권한부여일</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>사진게시판</td>
+                <td>먹쿠먹쿠</td>
+                <td>R</td>
+                <td>2020-05-22 15:00</td>
+                <td>
+                  <CButton type="submit" size="m" color="primary"><CIcon name="cil-scrubber" /> 권한 삭제</CButton>
+                </td>
+              </tr>
               </tbody>
             </table>
           </CCardBody>

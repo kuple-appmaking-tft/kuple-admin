@@ -58,8 +58,8 @@ const Comment = React.lazy(() => import('./views/boards/Comment'));
 const RecycleBin = React.lazy(() => import('./views/boards/RecycleBin'));
 
 const AdminAuth = React.lazy(() => import('./views/admin/AdminAuth'));
-const AdminCreate = React.lazy(() => import('./views/users/Users'));
-const AdminUser = React.lazy(() => import('./views/users/Users'));
+const AdminCreate = React.lazy(() => import('./views/admin/AdminCreate'));
+const AdminUser = React.lazy(() => import('./views/admin/UserAuth'));
 
 const Users = React.lazy(() => import('./views/users/Users'));
 const User = React.lazy(() => import('./views/users/User'));
